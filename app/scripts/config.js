@@ -42,7 +42,8 @@ var config = (function() {
         isRendering: true,
         order: 5
       },
-    ]
+    ],
+    language: 'en-US'
   }
 })()
 

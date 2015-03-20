@@ -1,8 +1,12 @@
 var React = require('react');
 var config = require('../config');
 var utilities = require('../utilities');
+var ReactIntl = require('react-intl');
+var IntlMixin     = ReactIntl.IntlMixin;
+var FormattedDate = ReactIntl.FormattedDate;
 
 var OverviewBlock = React.createClass({
+  mixins: [IntlMixin],
   getInitialState: function(){
     return {
       mainInfo:[]
@@ -30,6 +34,7 @@ var OverviewBlock = React.createClass({
 });
 
 var Overview = React.createClass({
+  mixins: [IntlMixin],
   render:function(){
     return(
       <div className="overview__content">
@@ -39,7 +44,13 @@ var Overview = React.createClass({
           <div className="overview__infoBlock">
             <div className="overview__infoIcon overview__infoIcon--when"></div>
             <div className="overview__infoData overview__infoData--when">
-              <span>{this.props.mainInfo.time}</span>
+              <span>
+                <FormattedDate
+                  value={new Date()}
+                  day="numeric"
+                  month="long"
+                  year="numeric" />
+              </span>
             </div>
           </div>
           <div className="overview__infoBlock">
@@ -49,6 +60,7 @@ var Overview = React.createClass({
             </div>
           </div>
         </div>
+
       </div>
     )
   }
