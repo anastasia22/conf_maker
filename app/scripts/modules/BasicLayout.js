@@ -34,7 +34,6 @@ var LayoutBasic = React.createClass({
       registration: <Registration key="Registration" />,
       overview: <Overview key="Overview" />
     };
-    console.log(Speakers);
 
     var modulesToRender = confModules.map(function(item) {
       return moduleList[item];

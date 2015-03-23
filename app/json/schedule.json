@@ -1,6 +1,17 @@
 [
   {
-    "name": "JavaScript Conference",
+    "main_info": {  
+      "name": "JavaScript Conference",
+      "about":"3-day event for designers, front-end developers, and people working to make the web awesome.",
+      "start_time": {
+        "year":"2015",
+        "month":"04",
+        "date":"22",
+        "hours":"15",
+        "minutes":"0"
+      },
+      "location":"Lviv, Ukraine"
+    },
     "days": [
       {
         "day_id":"01",
