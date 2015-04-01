@@ -1,7 +1,7 @@
 'use strict';
 
 var utilities = {
-  ajax: function(method, url, callBack) {
+  ajax : function(method, url, callBack) {
     var request = new XMLHttpRequest();
     request.open(method, url, true);
     request.onreadystatechange = function() {
