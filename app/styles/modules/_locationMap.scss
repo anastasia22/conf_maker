@@ -6,17 +6,13 @@
 .location {
     flex: 1;
     overflow:hidden;
+    
     iframe {
         width:100%;
         height: 500px;
-        div.gm-style {
-            border: 3px solid red;
-            div:first-child{
-                pointer-events: none;
-            }
-        }
-        @include bp(small) {
-            height: 360px;
-        }
     }
+
+}
+.locationPoints{
+    pointer-events: none;
 }
